@@ -89,9 +89,42 @@
 					</section>
 				</section>
 				<section>
-					<h2>Repositories</h2>
-				  * Collection of files/folders and ALL of the changes that've been made to them
-				  * .git folder
+					<section>
+						<h2>Repositories</h2>
+						<pre><code class="bash hljs" data-trim contenteditable>
+~/Desktop $ mkdir -p demo-repo
+~/Desktop $ cd demo-repo/
+~/Desktop/demo-repo $ git init .
+Initialized empty Git repository in /Users/cheisel/Desktop/demo-repo/.git/
+						</code></pre>
+					</section>
+					<section>
+						<h2>All in one folder</h2>
+						<pre><code class="bash hljs" data-trim contenteditable>
+~/Desktop/demo-repo $ tree .git/
+.git/
+├── HEAD
+├── config
+├── description
+...
+├── info
+│   └── exclude
+├── objects
+│   ├── info
+│   └── pack
+└── refs
+    ├── heads
+    └── tags
+					</code></pre>
+					<aside class="notes">
+						.git folder is the repo
+						initial state and history of ALL changes since then
+					</aside>
+					</section>
+					<section>
+						<h2>GitHub makes this easy</h2>
+						<img src="." data-src="img/gh-new-repo.png" alt="New repo">
+					</section>
 				</section>
 				<section>
 					<h2>Clone</h2>
