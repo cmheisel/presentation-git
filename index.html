@@ -90,8 +90,8 @@
 				</section>
 				<section>
 					<section>
-						<h2>Repositories</h2>
-						<pre><code class="bash hljs" data-trim contenteditable>
+						<h2>1. Repositories</h2>
+						<pre class="stretch"><code class="bash hljs" data-trim contenteditable>
 ~/Desktop $ mkdir -p demo-repo
 ~/Desktop $ cd demo-repo/
 ~/Desktop/demo-repo $ git init .
@@ -100,7 +100,7 @@ Initialized empty Git repository in /Users/cheisel/Desktop/demo-repo/.git/
 					</section>
 					<section>
 						<h2>All in one folder</h2>
-						<pre><code class="bash hljs" data-trim contenteditable>
+						<pre class="stretch"><code class="bash hljs" data-trim contenteditable>
 ~/Desktop/demo-repo $ tree .git/
 .git/
 ├── HEAD
@@ -130,11 +130,35 @@ Initialized empty Git repository in /Users/cheisel/Desktop/demo-repo/.git/
 					</section>
 				</section>
 				<section>
-					<h2>Clone</h2>
-				  * Make a copy of the entire repository onto my machine
+					<section>
+						<h2>2. Clone</h2>
+					</section>
+					<section>
+						<pre class="stretch"><code class="bash hljs" data-trim contenteditable>
+~/Desktop $ git clone git@github.com:cmheisel/demo-repo.git
+Cloning into 'demo-repo'...
+remote: Counting objects: 3, done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Receiving objects: 100% (3/3), done.
+Checking connectivity... done.
+
+
+
+~/Desktop $ ls -a1 demo-repo/
+.
+..
+.git
+README.md
+						</code></pre>
+					</section>
+
+					<section>
+						<img src="img/2016-07-pyladies-git/2016-07-pyladies-git.002.png" alt="State diagram" class="stretch">
+					</section>
+
 				</section>
 				<section>
-					<h2>Change sets</h2>
+					<h2>3. Chchchanges</h2>
 				  * Make changes to code
 				  * Add them to the stage
 				</section>
@@ -195,7 +219,8 @@ Initialized empty Git repository in /Users/cheisel/Desktop/demo-repo/.git/
 			// More info https://github.com/hakimel/reveal.js#configuration
 			Reveal.initialize({
 				history: true,
-
+				controls: false,
+				margin: 0,
 				// More info https://github.com/hakimel/reveal.js#dependencies
 				dependencies: [
 					{ src: 'plugin/markdown/marked.js' },
