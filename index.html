@@ -161,9 +161,59 @@ README.md
 
 				</section>
 				<section>
-					<h2>3. Chchchanges</h2>
-				  * Make changes to code
-				  * Add them to the stage
+					<section>
+						<h2>3. Changes</h2>
+						<img src="img/bowie-chchchange.png" alt="Changes" class="stretch">
+						<aside class="notes">
+					  	* Make changes to code
+					  	* Add them to the stage
+						</aside>
+					</section>
+					<section>
+						<pre class="stretch"><code class="bash hljs">
+~/Desktop/demo-repo $ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Changes not staged for commit:
+  (use "git add &lt;file&gt;..." to update what will be committed)
+  (use "git checkout -- &lt;file&gt;..." to discard changes in working directory)
+
+        modified:   README.md
+
+Untracked files:
+  (use "git add &lt;file&gt;..." to include in what will be committed)
+
+        awesome-ship-names.py
+
+no changes added to commit (use "git add" and/or "git commit -a")
+						</code></pre>
+					</section>
+					<section>
+						<pre class="stretch"><code class="bash hljs">
+~/Desktop/demo-repo $ git add README.md
+~/Desktop/demo-repo $ git add awesome-ship-names.py
+
+~/Desktop/demo-repo $ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Changes to be committed:
+  (use "git reset HEAD &lt;file&gt;..." to unstage)
+
+        modified:   README.md
+        new file:   awesome-ship-names.py
+						</code></pre>
+					</section>
+					<section>
+						<img src="img/2016-07-pyladies-git/2016-07-pyladies-git.002.png" alt="State diagram" class="stretch">
+					</section>
+					<section>
+						<img src="img/open-box.jpg" alt="Staging changes" class="stretch">
+						<aside class="notes">
+							Nothing changed in repo, yet
+							We've staged changes
+							Put them in a box but not yet sealed/shipped it
+						</aside>
+					</section>
 				</section>
 				<section>
 					<h2>Commit</h2>
