@@ -216,15 +216,50 @@ Changes to be committed:
 					</section>
 				</section>
 				<section>
-					<h2>Commit</h2>
-				  * A set of changes permanently added to the history
-				  * An undo point
+					<section>
+						<h2>Commit</h2>
+						<img src="img/launch-console-key.jpg" alt="Nuclear launch key" class="stretch">
+					</section>
+					<section>
+						<pre class="stretch"><code class="bash hljs">
+$ git commit -m "Update README, add ship name generator"
+[master c253dc9] Update README, add ship name generator
+ 2 files changed, 17 insertions(+), 1 deletion(-)
+ create mode 100644 awesome-ship-names.py
+
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+nothing to commit, working directory clean
+						</code></pre>
+					</section>
+					<section>
+						<img src="img/2016-07-pyladies-git/2016-07-pyladies-git.003.png" alt="State diagram" class="stretch">
+					</section>
 				</section>
 				<section>
-					<h2>Push</h2>
-				  * Send my changes up to the remote copy of the repository
-				  * Why? What happens if my laptop catches on fire
-				  * Or I want my friends to see the changes
+					<section>
+						<h2>Push</h2>
+						<img src="img/saturnv-launch.jpg" alt="Titan II launch" class="stretch">
+						<aside class="notes">
+							* Send my changes up to the remote copy of the repository
+						  * Why? What happens if my laptop catches on fire
+						  * Or I want my friends to see the changes
+						</aside>
+					</section>
+					<section>
+						<pre class="stretch"><code class="bash hljs">
+$ git push
+Counting objects: 4, done.
+Delta compression using up to 8 threads.
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 530 bytes | 0 bytes/s, done.
+Total 4 (delta 0), reused 0 (delta 0)
+To git@github.com:cmheisel/demo-repo.git
+   a07ece4..c253dc9  master -> master
+						</code></pre>
+					</section>
 				</section>
 				<section>
 					<h2>Branch</h2>
