@@ -217,7 +217,7 @@ Changes to be committed:
 				</section>
 				<section>
 					<section>
-						<h2>Commit</h2>
+						<h2>4. Commit</h2>
 						<img src="img/launch-console-key.jpg" alt="Nuclear launch key" class="stretch">
 					</section>
 					<section>
@@ -240,7 +240,7 @@ nothing to commit, working directory clean
 				</section>
 				<section>
 					<section>
-						<h2>Push</h2>
+						<h2>5. Push</h2>
 						<img src="img/saturnv-launch.jpg" alt="Titan II launch" class="stretch">
 						<aside class="notes">
 							* Send my changes up to the remote copy of the repository
@@ -265,20 +265,69 @@ To git@github.com:cmheisel/demo-repo.git
 					</section>
 				</section>
 				<section>
-					<h2>Branch</h2>
-				  * A set of commits occurring from a moment in the history of another Branch
-				  * Really it's a way for people working on different to do it in relative isolation
-				  * It's like your code goes on a vacation and doesn't check twitter or facebook for a while
+					<section>
+						<h2>Branch</h2>
+						<img src="img/tree-branch.jpg" alt="Tree branch" class="stretch">
+						<aside class="notes">
+							* A set of commits occurring from a moment in the history of another Branch
+						  * Really it's a way for people working on different to do it in relative isolation
+						</aside>
+					</section>
+					<section>
+							<pre class="stretch"><code class="bash hljs">
+$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+nothing to commit, working directory clean
+
+
+$ git checkout -b add-more-names
+Switched to a new branch 'add-more-names'
+$ git branch
+* add-more-names
+  master
+
+
+$ git status
+On branch add-more-names
+nothing to commit, working directory clean
+							</code></pre>
+					</section>
+					<section>
+						<img src="img/2016-07-pyladies-git/2016-07-pyladies-git.005.png" alt="State diagram" class="stretch">
+					</section>
+					<section>
+						<pre class="stretch"><code class="diff hljs">
+...add some text and commit it to the branch...
+
+$ git diff master
+diff --git a/awesome-ship-names.py b/awesome-ship-names.py
+index 60550ae..1404787 100644
+--- a/awesome-ship-names.py
++++ b/awesome-ship-names.py
+@@ -11,6 +11,11 @@ SHIP_NAMES = [
+     "Columbia",
+     "Discovery",
+     "Atlantis",
++    "Challenger",
++    "Endeavour",
++    "SDF-1",
++    "Eagle",
++    "Friendship 7",
+ ]
+						</code></pre>
+					</section>
+					<section>
+						<img src="img/2016-07-pyladies-git/2016-07-pyladies-git.006.png" alt="State diagram" class="stretch">
+						<aside class="notes">
+				  	* It's like your code goes on a vacation and doesn't check twitter or facebook for a while
+						</aside>
+					</section>
 				</section>
 				<section>
 					<h2>Merging</h2>
 				  * But in reality you want to stay mostly up to date with your teammates
 				  * Brings all the changes from the target branch into the destination branch
-				</section>
-				<section>
-					<h2>Pull request</h2>
-				  * Kind madam or sir, I hereby present this difference between my branch and your branch for your consideration
-				  * Results in a merge
 				</section>
 				<section>
 					<h2>Fork (Github)</h2>
@@ -291,6 +340,11 @@ To git@github.com:cmheisel/demo-repo.git
 				  * You can clone it locally
 				  * Make changes
 				  * and PR
+				</section>
+				<section>
+					<h2>Pull request</h2>
+				  * Kind madam or sir, I hereby present this difference between my branch and your branch for your consideration
+				  * Results in a merge
 				</section>
 				<section>
 					<h2>Github flow</h2>
