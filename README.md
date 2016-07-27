@@ -1,5 +1,7 @@
 # Getting good at Git - An introduction
 
+Viewable at https://cmheisel.github.io/presentation-git/
+
 * About me
 * Version control
   * Track changes to files
