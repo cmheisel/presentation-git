@@ -1,7 +1,8 @@
+BRANCH = $(shell git rev-parse --abbrev-ref HEAD)
+
 publish:
-	git checkout master
-	git push origin master
+	git push origin $(BRANCH)
 	git checkout gh-pages
-	git merge master
+	git merge $(BRANCH)
 	git push origin gh-pages
-	git checkout master
+	git checkout $(BRANCH)
